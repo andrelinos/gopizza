@@ -23,6 +23,9 @@
       "@services": [
         "./src/services/*"
       ],
+      "@theme": [
+        "./src/theme/*"
+      ],
       "@styles": [
         "./src/styles/*"
       ]
