@@ -2,33 +2,30 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
-    "experimentalDecorators": true,
+    // "experimentalDecorators": true,
     "baseUrl": "./",
     "paths": {
       "@src/*": [
         "./src/*"
       ],
-      "@components": [
-        "./src/components/*"
+      "@components/*": [
+        "src/components/*"
       ],
-      "@screens": [
+      "@screens/*": [
         "./src/screens/*"
       ],
-      "@assets": [
+      "@assets/*": [
         "./src/assets/*"
       ],
-      "@hooks": [
+      "@hooks/*": [
         "./src/hooks/*"
-      ],
-      "@services": [
-        "./src/services/*"
-      ],
-      "@theme": [
-        "./src/theme/*"
-      ],
-      "@styles": [
-        "./src/styles/*"
       ]
     }
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ]
 }
