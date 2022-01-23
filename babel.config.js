@@ -7,7 +7,7 @@ module.exports = function (api) {
                 'module-resolver',
                 {
                     root: ['./src'],
-                    extesions: ['.ts', '.tsx', '.js', '.json'],
+                    extensions: ['.ts', '.tsx', '.js', '.json'],
                     alias: {
                         '@src': './src',
                         '@components': './src/components',

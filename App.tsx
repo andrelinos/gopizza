@@ -5,8 +5,10 @@ import { ThemeProvider } from 'styled-components';
 import { useFonts, DMSans_400Regular } from '@expo-google-fonts/dm-sans';
 import { DMSerifDisplay_400Regular } from '@expo-google-fonts/dm-serif-display';
 
-import theme from '@src/theme';
 import { SignIn } from '@screens/SignIn';
+
+import theme from '@src/theme';
+import { StatusBar } from 'expo-status-bar';
 
 export default function App() {
     const [fontsLoaded] = useFonts({
@@ -20,6 +22,11 @@ export default function App() {
 
     return (
         <ThemeProvider theme={theme}>
+            <StatusBar
+                style="light"
+                backgroundColor="transparent"
+                translucent
+            />
             <SignIn />
         </ThemeProvider>
     );
