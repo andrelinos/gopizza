@@ -6,14 +6,13 @@ module.exports = function (api) {
             [
                 'module-resolver',
                 {
-                    root: ['./'],
-                    // extensions: ['.ts', '.tsx', '.js', '.json'],
+                    root: ['./src'],
+                    extesions: ['.ts', '.tsx', '.js', '.json'],
                     alias: {
                         '@src': './src',
-                        '@assets': './src/assets',
                         '@components': './src/components',
                         '@screens': './src/screens',
-                        '@hooks': './src/hooks'
+                        '@assets': './src/assets'
                     }
                 }
             ]
