@@ -1,5 +1,6 @@
 import React from 'react';
 import AppLoading from 'expo-app-loading';
+import { StatusBar } from 'expo-status-bar';
 import { ThemeProvider } from 'styled-components';
 
 import { useFonts, DMSans_400Regular } from '@expo-google-fonts/dm-sans';
@@ -8,7 +9,6 @@ import { DMSerifDisplay_400Regular } from '@expo-google-fonts/dm-serif-display';
 import { SignIn } from '@screens/SignIn';
 
 import theme from '@src/theme';
-import { StatusBar } from 'expo-status-bar';
 
 export default function App() {
     const [fontsLoaded] = useFonts({
