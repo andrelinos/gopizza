@@ -1,16 +1,29 @@
 import React from 'react';
-import { TextInputProps } from 'react-native';
 
-import { Container, TypeProps } from './styles';
+import { Input } from '@src/components/Input';
+import { Button } from '@src/components/Button';
 
-type Props = TextInputProps & {
-    type?: TypeProps;
-};
+import { Container } from './styles';
 
 export function SignIn() {
     return (
         <Container>
-            <Title>SignIn</Title>
+            <Input
+                placeholder="E-mail"
+                type="secondary"
+                autoCorrect={false}
+                autoCapitalize="none"
+                keyboardType="email-address"
+            />
+            <Input
+                placeholder="Senha"
+                type="secondary"
+                autoCorrect={false}
+                autoCapitalize="none"
+                secureTextEntry
+            />
+
+            <Button title="Entrar" type="secondary" />
         </Container>
     );
 }
