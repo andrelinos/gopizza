@@ -9,15 +9,16 @@ type ContainerProps = {
 
 export const Container = styled(RectButton)<ContainerProps>`
     flex: 1;
-    min-height: 56px;
+    width: 100%;
     max-height: 56px;
+    min-height: 56px;
     border-radius: 12px;
     justify-content: center;
     align-items: center;
 
     background-color: ${({ theme, type }) =>
         type === 'primary'
-            ? theme.COLORS.PRIMARY_900
+            ? theme.COLORS.SUCCESS_900
             : theme.COLORS.PRIMARY_800};
 `;
 

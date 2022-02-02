@@ -23,7 +23,7 @@ export function SignIn() {
                 secureTextEntry
             />
 
-            <Button title="Entrar" type="secondary" />
+            <Button title="Entrar" />
         </Container>
     );
 }
