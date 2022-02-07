@@ -1,5 +1,7 @@
 import styled from 'styled-components/native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { getBottomSpace } from 'react-native-iphone-x-helper';
+import { RFValue } from 'react-native-responsive-fontsize';
 
 export const Container = styled(LinearGradient).attrs(({ theme }) => ({
     colors: theme.COLORS.GRADIENT,
@@ -8,7 +10,20 @@ export const Container = styled(LinearGradient).attrs(({ theme }) => ({
 }))`
     flex: 1;
     justify-content: center;
-    align-items: center;
 `;
 
-export const Title = styled.Text``;
+export const Content = styled.ScrollView.attrs({
+    showsVerticalScrollIndicator: false,
+    contentContainerStyle: {
+        paddingBottom: getBottomSpace() + 48
+    }
+})`
+    width: 100%;
+    padding: 0 32px;
+`;
+
+export const Title = styled.Text`
+    font-size: ${RFValue(32)}px;
+    margin-bottom: 24px;
+    align-self: flex-start;
+`;
