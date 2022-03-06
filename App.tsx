@@ -4,6 +4,8 @@ import { LogBox } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { ThemeProvider } from 'styled-components';
 
+import 'react-native-gesture-handler';
+
 import { AuthProvider } from '@hooks/auth';
 
 import { useFonts, DMSans_400Regular } from '@expo-google-fonts/dm-sans';
