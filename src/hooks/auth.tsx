@@ -2,8 +2,6 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { Alert } from 'react-native';
 import auth from '@react-native-firebase/auth';
 
-import { app } from '../config/firebase';
-
 type AuthContextData = {
     signIn: (email: string, password: string) => Promise<void>;
     isLogging: boolean;
