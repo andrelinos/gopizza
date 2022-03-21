@@ -9,7 +9,7 @@ import { AuthProvider } from './src/hooks/auth';
 import { useFonts, DMSans_400Regular } from '@expo-google-fonts/dm-sans';
 import { DMSerifDisplay_400Regular } from '@expo-google-fonts/dm-serif-display';
 
-import { theme } from '@styles/theme';
+import theme from '@styles/theme';
 import { Product } from '@src/screens/Product';
 
 LogBox.ignoreLogs([

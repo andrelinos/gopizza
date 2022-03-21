@@ -46,4 +46,4 @@ const theme: DefaultTheme = {
 //     error: '#EF9A9A'
 // };
 
-export { theme };
+export default theme;
