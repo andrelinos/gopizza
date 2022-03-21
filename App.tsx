@@ -1,17 +1,16 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import AppLoading from 'expo-app-loading';
 import { LogBox } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { ThemeProvider } from 'styled-components';
 
-import { AuthProvider } from '@hooks/auth';
+import { AuthProvider } from './src/hooks/auth';
 
 import { useFonts, DMSans_400Regular } from '@expo-google-fonts/dm-sans';
 import { DMSerifDisplay_400Regular } from '@expo-google-fonts/dm-serif-display';
 
-import { SignIn } from '@screens/SignIn';
-
-import theme from '@src/theme';
+import { theme } from '@styles/theme';
+import { Product } from '@src/screens/Product';
 
 LogBox.ignoreLogs([
     "[react-native-gesture-handler] Seems like you're using an old API with gesture components, check out new Gestures system!"
@@ -35,7 +34,7 @@ export default function App() {
                 translucent
             />
             <AuthProvider>
-                <SignIn />
+                <Product />
             </AuthProvider>
         </ThemeProvider>
     );
